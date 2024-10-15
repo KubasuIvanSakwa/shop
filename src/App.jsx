@@ -9,6 +9,7 @@ import {
 const Layout = lazy(() => import("./pages/Layout"))
 const Login = lazy(() => import("./pages/Login"))
 const Marketplace = lazy(() => import("./components/Marketplace"))
+const Descriptionpage = lazy(() => import("./components/Descriptionpage"))
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Route>
       <Route path="/" element={<Layout />}>
         <Route index element={<Marketplace />} />
+        <Route path="item/:idno" element={<Descriptionpage />} />
       </Route>
       <Route path="login" element={<Login />} />
     </Route>

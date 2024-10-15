@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Link } from 'react-router-dom';
 
 const Login = () => (
     <section className='flex justify-center items-center h-[90vh] w-full'>
@@ -16,10 +17,8 @@ const Login = () => (
             return errors;
         }}
         onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-            }, 400);
+            localStorage.setItem('email', JSON.stringify(values))
+            window.location.href = "/"
         }}
         >
         {({ isSubmitting }) => (
@@ -38,6 +37,12 @@ const Login = () => (
                 >
                     Submit
                 </button>
+                <Link
+                    className='mt-3 w-[40%] h-[2rem] text-black/80 underline'
+                    to="/"
+                >
+                    continue as guest
+                </Link>
             </Form>
         )}
         </Formik>

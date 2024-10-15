@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 function Nav() {
     const [hov, setHov] = useState(false)
+    const email = localStorage.getItem('email')
 
     return (
         <nav className='relative flex justify-between border-b z-50'>
@@ -15,9 +16,6 @@ function Nav() {
                 <span className='text-green-500 font-extrabold'>
                 S</span>H<span className='w-[1.6rem]'><img src={Logo} alt="O" className='w-[1.6rem]'/></span>P
             </div>
-            <ul className='flex items-center gap-5 just pl-5'>
-                <li className='cursor-pointer'>Welcome to Marketplace</li>
-            </ul>
             <div className='flex items-center gap-2 relative'>
                 <div 
                     className='flex items-center gap-2 cursor-pointer'
@@ -31,9 +29,9 @@ function Nav() {
                 >
                     <img src={UserLogo} alt="User Logo" className='w-[2.5rem]'/>
                     <div className='flex'>
-                        <p>
-                            Account
-                        </p>
+                        {email ? <p className='truncate'>
+                            {email.email}
+                        </p>: <p className='truncate'>Account</p>}
                         <button className='pl-2'>
                             <p className='rotate-90 text-xl font-extralight opacity-85'>
                                 &gt;
