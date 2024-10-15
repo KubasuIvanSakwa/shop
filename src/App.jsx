@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 
 const Layout = lazy(() => import("./pages/Layout"))
+const Login = lazy(() => import("./pages/Login"))
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Layout />}>
 
       </Route>
+      <Route path="login" element={<Login />} />
     </Route>
   ))
 
