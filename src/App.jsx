@@ -8,13 +8,14 @@ import {
 
 const Layout = lazy(() => import("./pages/Layout"))
 const Login = lazy(() => import("./pages/Login"))
+const Marketplace = lazy(() => import("./components/Marketplace"))
 
 function App() {
 
   const routes = createBrowserRouter(createRoutesFromElements(
     <Route>
       <Route path="/" element={<Layout />}>
-
+        <Route index element={<Marketplace />} />
       </Route>
       <Route path="login" element={<Login />} />
     </Route>

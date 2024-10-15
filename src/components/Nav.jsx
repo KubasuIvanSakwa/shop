@@ -1,7 +1,7 @@
 import UserLogo from '../assets/user.svg'
 import CartLogo from '../assets/cart.svg'
 import ArrowLogo from '../assets/arrowup.svg'
-import BeachBall from '../assets/beachBall.svg'
+import Logo from '../assets/logo.svg'
 import { useState } from 'react'
 
 
@@ -10,21 +10,13 @@ function Nav() {
     const [hov, setHov] = useState(false)
 
     return (
-        <nav className='flex justify-between border-b'>
+        <nav className='relative flex justify-between border-b z-50'>
             <div className='text-3xl font-extralight pl-2 flex items-center'>
                 <span className='text-green-500 font-extrabold'>
-                S</span>H<span className='w-[1.6rem]'><img src={BeachBall} alt="O" className='w-[1.6rem]'/></span>P
+                S</span>H<span className='w-[1.6rem]'><img src={Logo} alt="O" className='w-[1.6rem]'/></span>P
             </div>
             <ul className='flex items-center gap-5 just pl-5'>
-                <li className='flex gap-1 cursor-pointer'>
-                    Categories
-                    <p className='rotate-90 text-xl font-extralight opacity-85'>
-                        &gt;
-                    </p>
-                </li>
-                <li className='cursor-pointer'>Deals</li>
-                <li className='cursor-pointer'>What&apos;s New</li>
-                <li className='cursor-pointer'>Delivery</li>
+                <li className='cursor-pointer'>Welcome to Marketplace</li>
             </ul>
             <div className='flex items-center gap-2 relative'>
                 <div 
