@@ -10,6 +10,7 @@ const Layout = lazy(() => import("./pages/Layout"))
 const Login = lazy(() => import("./pages/Login"))
 const Marketplace = lazy(() => import("./components/Marketplace"))
 const Descriptionpage = lazy(() => import("./components/Descriptionpage"))
+const Cart = lazy(() => import("./components/Cart"))
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Marketplace />} />
         <Route path="item/:idno" element={<Descriptionpage />} />
+        <Route path="cart" element={<Cart />} />
       </Route>
       <Route path="login" element={<Login />} />
     </Route>
