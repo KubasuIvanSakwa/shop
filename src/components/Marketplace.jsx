@@ -10,7 +10,7 @@ function Marketplace() {
     // Fetch data from the cosmetics.json file
     const fetchCosmeticsData = async () => {
     try {
-    const response = await fetch('../../public/Items.json'); // Dummy fetch from local JSON
+    const response = await fetch('/Items.json'); // Dummy fetch from local JSON
     if (!response.ok) {
         throw new Error('Failed to fetch cosmetics data');
     }
