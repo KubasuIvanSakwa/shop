@@ -10,7 +10,7 @@ function CartPage() {
     // Fetch cosmetics data
     const fetchCosmetics = async () => {
         try {
-            const response = await fetch('../../public/Items.json'); // Fetch the cosmetics list
+            const response = await fetch('/Items.json'); // Fetch the cosmetics list
             if (!response.ok) {
                 throw new Error('Failed to fetch cosmetics data');
             }
